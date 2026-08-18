@@ -1,0 +1,31 @@
+import { useState } from 'react'
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './Component/Navbar'
+import Home from './Pages/Home'
+// import About from './Pages/About'
+// import Menu from './Pages/Menu'
+// import Contact from './Pages/Contact'
+import './App.css'
+import Footer from './Component/Footer'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/About" element={<About />} />
+          <Route path="/Menu" element={<Menu />} />
+          <Route path="/Contact" element={<Contact />} /> */}
+        </Routes>
+        <Footer/>
+      </Router>
+    </>
+  )
+}
+
+export default App
