@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary-50: #473dd3;
   --color-primary-400: #ffffff;
@@ -9,8 +11,12 @@
 
 body {
   margin: 0;
+  
 }
-
+.paddingLeftRight {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 #root {
   /* height: 100vh; */
   width: 100%;

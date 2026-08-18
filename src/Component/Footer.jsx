@@ -1,86 +1,126 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import image from '../assets/Hiredesklogo3.png'
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaSearch, FaPhoneAlt } from 'react-icons/fa'
+import { FaInstagram, FaFacebook, FaTwitter, FaTiktok, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-primary-500 text-gray-900 py-8 mt-16">
-          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <footer className="bg-primary-500 text-gray-500 py-8 mt-16 paddingLeftRight pt-12">
+          <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 ">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6  text-2xl font-semibold text-left">
                   {/* <!-- Footer Left: Logo and Description --> */}
-                  <div>
+                <div className="col-span-1 md:col-span-2 lg:col-span-1">
                         {/* <!-- Logo --> */}
                     <div className="shrink-0 text-primary-50 font-bold text-2xl ">
                         <Link to="/">
                         <img src={image} alt="Logo" className="h-20 " />
                         </Link>
                     </div>
-                      <p className="mt-2  text-sm">
-                          Your go-to place for fresh, delicious lemon-based products.
+                      <p className="mt-2  text-2xl font-semibold text-left pb-4">
+                          Connect with your next career opportunity. HireHub is the modern job board platform for top talent and leading employers.
                       </p>
-                  </div>
+                    <div className="mt-4 space-y-5 text-left">
+                        <a href="tel:+2341234567890" className="hover:text-gray-300 transition ">
+                            <FaPhoneAlt className="inline mr-3" />
+                                (234) 123-456-7890
+                        </a><br /><br />
+                        <a href="mailto:info@hirehub.com" className="hover:text-gray-300 transition ">
+                            <FaEnvelope className="inline mr-3" />
+                            info@hirehub.com
+                        </a> <br /><br />
+                        <a href="https://www.google.com/maps/place/HireHub" className="hover:text-gray-300 transition ">
+                            <FaMapMarkerAlt className="inline mr-3" />
+                            123 Job Street, Career City
+                        </a>
+                    </div>
+                                      {/* <!-- Footer Right: Social Media & Contact --> */}
+                    <div>
+                        
+                        <div className="mt-8 flex flex-nowrap gap-6 pt-2.5 mb-14">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="rounded-xl bg-[#1f2937]   p-2 hover:text-primary-400 transition text-gray-500 hover:scale-110 transform duration-200">
+                                <FaInstagram size={35} />
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="rounded-xl bg-[#1f2937]  p-2 hover:text-primary-400 transition text-gray-500 hover:scale-110 transform duration-200">
+                                <FaFacebook size={35} />
+                            </a>
+                            <a href="https://www.twitter.com" target="_blank" rel="noreferrer" className="rounded-xl bg-[#1f2937]  p-2 hover:text-primary-400 transition text-gray-500 hover:scale-110 transform duration-200">
+                                <FaTwitter size={35} />
+                            </a>
+                            <a href="https://www.tiktok.com" target="_blank" rel="noreferrer" className="rounded-xl bg-[#1f2937]  p-2 hover:text-primary-400 transition text-gray-500 hover:scale-110 transform duration-200">
+                                <FaTiktok size={35} />
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="rounded-xl bg-[#1f2937]  p-2 hover:text-primary-400 transition text-gray-500 hover:scale-110 transform duration-200">
+                                <FaLinkedin size={35} />
+                            </a>
+                        </div>
+                        {/* <p className="mt-4 text-sm">Email: support@LemonDay.com</p> */}
+                    </div>
+                </div>
 
-                  {/* <!-- Footer Center: Useful Links --> */}
-                  <div>
-                      <h3 className="text-lg font-semibold text-lime-700">Quick Links</h3>
+                <div className="w-full grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4  justify-center  md:col-span-2 gap-6">
+                  <div className="p-8  ">
+                      <h3 className="text-lg font-bold text-primary-400 uppercase">For Job Seekers</h3>
                       <ul className="mt-4 space-y-2">
-                          <li><Link to="/#hero" className=" hover:text-gray-300 transition">Home</Link></li>
-                          <li><Link to="/About#about" className=" hover:text-gray-300 transition">About</Link></li>
-                          <li><Link to="/About#shop" className=" hover:text-gray-300 transition">Shop</Link></li>
-                          <li><Link to="/Menu" className=" hover:text-gray-300 transition">Menu</Link></li>
-                          <li><Link to="/About#contact" className=" hover:text-gray-300 transition">Contact</Link></li>
+                          <li><Link to="/#hero" className=" hover:text-gray-300 transition">Browse Jobs</Link></li>
+                          <li><Link to="/About#about" className=" hover:text-gray-300 transition">Companies</Link></li>
+                          <li><Link to="/About#shop" className=" hover:text-gray-300 transition">Career Tips</Link></li>
+                          <li><Link to="/Menu" className=" hover:text-gray-300 transition">Salary Guide</Link></li>
+                          
+                      </ul>
+                  </div>
+                  <div className="p-8">
+                      <h3 className="text-lg font-bold text-primary-400 uppercase">For Employers</h3>
+                      <ul className="mt-4 space-y-2">
+                          <li><Link to="/#hero" className=" hover:text-gray-300 transition">Post a Job</Link></li>
+                          <li><Link to="/About#about" className=" hover:text-gray-300 transition">Pricing</Link></li>
+                          <li><Link to="/About#shop" className=" hover:text-gray-300 transition">For Employers</Link></li>
+                          <li><Link to="/Menu" className=" hover:text-gray-300 transition">High Resources</Link></li>
+                         
+                      </ul>
+                  </div>
+                  <div className="p-8 ">
+                      <h3 className="text-lg font-bold text-primary-400 uppercase">Resources</h3>
+                      <ul className="mt-4 space-y-2">
+                          <li><Link to="/#hero" className=" hover:text-gray-300 transition">Blog</Link></li>
+                          <li><Link to="/About#about" className=" hover:text-gray-300 transition">About Us</Link></li>
+                          <li><Link to="/About#shop" className=" hover:text-gray-300 transition">Features</Link></li>
+                          <li><Link to="/Menu" className=" hover:text-gray-300 transition">Style Guide</Link></li>
+
                       </ul>
                   </div>
 
-                  <div>
-                      <h3 className="text-lg font-semibold text-lime-700">More Links</h3>
+                  <div className="p-8">
+                      <h3 className="text-lg font-bold text-primary-400 uppercase">Company</h3>
                       <ul className="mt-4 space-y-2">
-                          <li><Link to="/" className=" hover:text-gray-300 transition">Privacy Policy</Link></li>
-                          <li><Link to="/" className=" hover:text-gray-300 transition">Help Center</Link></li>
-                          <li><Link to="/#Faq" className=" hover:text-gray-300 transition">FAQ</Link></li>
-                          <li><Link to="/#Review" className=" hover:text-gray-300 transition">Review</Link></li>
+                          <li><Link to="/" className=" hover:text-gray-300 transition">About</Link></li>
+                          <li><Link to="/" className=" hover:text-gray-300 transition">Contact</Link></li>
+                          <li><Link to="/#Faq" className=" hover:text-gray-300 transition">Privacy Policy</Link></li>
+                          <li><Link to="/#Review" className=" hover:text-gray-300 transition">Terms of Service</Link></li>
                       </ul>
-                  </div>
-                  {/* <!-- Footer Right: Social Media & Contact --> */}
-                  <div>
-                      <h3 className="text-lg font-semibold text-lime-700">Follow Us</h3>
-                      <div className="mt-4 flex flex-wrap gap-3">
-                          <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="rounded-full border border-gray-300 p-2 hover:text-lime-700 transition">
-                              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm5.25-3.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
-                              </svg>
-                          </a>
-                          <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="rounded-full border border-gray-300 p-2 hover:text-lime-700 transition">
-                              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M13 22v-8h2.7l.4-3H13V4.3c0-.9.3-1.5 1.5-1.5H16V.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.7v3H10v8h3z"/>
-                              </svg>
-                          </a>
-                          <a href="https://www.twitter.com" target="_blank" rel="noreferrer" className="rounded-full border border-gray-300 p-2 hover:text-lime-700 transition">
-                              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M22 5.9c-.8.4-1.7.7-2.6.8a4.4 4.4 0 0 0 1.9-2.4 8.9 8.9 0 0 1-2.8 1.1 4.4 4.4 0 0 0-7.5 4 12.5 12.5 0 0 1-9.1-4.6 4.4 4.4 0 0 0 1.4 5.9 4.3 4.3 0 0 1-2-.6v.1a4.4 4.4 0 0 0 3.5 4.3 4.4 4.4 0 0 1-2 .1 4.4 4.4 0 0 0 4.1 3.1A8.8 8.8 0 0 1 2 18.7a12.4 12.4 0 0 0 6.7 2 12.4 12.4 0 0 0 12.4-12.4v-.6A8.8 8.8 0 0 0 22 5.9z"/>
-                              </svg>
-                          </a>
-                          <a href="https://www.tiktok.com" target="_blank" rel="noreferrer" className="rounded-full border border-gray-300 p-2 hover:text-lime-700 transition">
-                              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M14.5 2h2.8a5.3 5.3 0 0 0 5.3 5.3v2.8a8.1 8.1 0 0 1-5.3-1.8v7.7a5.2 5.2 0 1 1-5.2-5.2c.3 0 .5 0 .8.1v2.8a2.4 2.4 0 1 0 1.6 2.3V2z"/>
-                              </svg>
-                          </a>
-                          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="rounded-full border border-gray-300 p-2 hover:text-lime-700 transition">
-                              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.94 8.5A1.56 1.56 0 1 0 6.94 5.4a1.56 1.56 0 0 0 0 3.1zM5.5 9.6h2.9V19H5.5zM10.1 9.6h2.8v1.3h.04c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7V19h-2.9v-8.4c0-2-.1-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.4V19H10.1z"/>
-                              </svg>
-                          </a>
-                      </div>
-                      <p className="mt-4 text-sm">Email: support@LemonDay.com</p>
-                  </div>
+                  </div>                    
+                </div>  {/* <!-- Footer Center: Useful Links --> */}
+
+
 
                 
-              </div>
+            </div>
 
               {/* <!-- Footer Bottom: Copyright --> */}
-              <div className="mt-8 border-t border-gray-700 pt-4 text-center  text-sm">
+              <div className="mt-8 border-t border-gray-700 pt-4 text-center  text-xl font-semibold text-gray-500 flex justify-between items-center  gap-4 mb-8">
                   <p>© 2026 VicRuro React Project.</p>
+                  <div>
+                    <ul className="mt-4 space-y-2 flex flex-wrap justify-center gap-6 text-xl font-semibold text-gray-500">
+                          <li><Link to="/#hero" className=" hover:text-gray-300 transition">Privacy Policy</Link></li>
+                          <li><Link to="/About#about" className=" hover:text-gray-300 transition">Terms of Service</Link></li>
+                          <li><Link to="/About#shop" className=" hover:text-gray-300 transition">Style Guide</Link></li>
+
+
+                    </ul>
+                  </div>
               </div>
           </div>
       </footer>
