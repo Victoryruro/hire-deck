@@ -62,7 +62,7 @@ export default function StatsRow() {
   return (
     <div
       ref={sectionRef}
-      className="w-full py-12 grid grid-cols-2 md:grid-cols-4 gap-8 bg-gray-50 dark:bg-gray-900 p-20 pb-30 pt-30" 
+      className="w-full py-12 grid grid-cols-2 md:grid-cols-4 gap-8 bg-gray-50 dark:bg-[#111827]! p-20 pb-30 pt-30" 
     >
       <StatItem className="text-4xl md:text-6xl font-extrabold text-[#4c42dc]" value={2500} suffix="+" label="Active Jobs" startAnimation={startAnimation} />
       <StatItem className="text-4xl md:text-6xl font-extrabold text-[#4c42dc]" value={500} suffix="+" label="Companies" startAnimation={startAnimation} />
