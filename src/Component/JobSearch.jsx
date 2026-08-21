@@ -15,7 +15,7 @@ const JobSearchFilters = () => {
   const [location, setLocation] = useState('')
   const [category, setCategory] = useState('All Categories')
   const [showAdvanced, setShowAdvanced] = useState(false)
-  const [salary, setSalary] = useState(120)
+  const [salary, setSalary] = useState(100)
   const [jobTypes, setJobTypes] = useState([])
   const [experience, setExperience] = useState([])
 
@@ -94,7 +94,7 @@ const JobSearchFilters = () => {
         <div className="mt-4  bg-gray-50 dark:bg-gray-800! rounded-xl p-6 grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Salary range */}
           <div>
-            <p className="text-xs font-bold tracking-wider text-gray-600 dark:text-gray-300 text-center mb-4 uppercase">
+            <p className="text-sm font-bold tracking-wider text-gray-600 dark:text-gray-300 text-center mb-4 uppercase">
               Salary Range
             </p>
             <input
@@ -114,10 +114,10 @@ const JobSearchFilters = () => {
 
           {/* Job type */}
           <div>
-            <p className="text-xs font-bold tracking-wider text-gray-600 dark:text-gray-300 text-center mb-4 uppercase">
+            <p className="text-sm font-bold tracking-wider text-gray-600 dark:text-gray-300 text-center mb-4 uppercase">
               Job Type
             </p>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
               {JOB_TYPES.map((type) => (
                 <FilterPill
                   key={type}
@@ -131,10 +131,10 @@ const JobSearchFilters = () => {
 
           {/* Experience */}
           <div>
-            <p className="text-xs font-bold tracking-wider text-gray-600 dark:text-gray-300 text-center mb-4 uppercase">
+            <p className="text-sm font-bold  tracking-wider text-gray-600 dark:text-gray-300 text-center mb-4 uppercase">
               Experience
             </p>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
               {EXPERIENCE_LEVELS.map((level) => (
                 <FilterPill
                   key={level}
@@ -147,7 +147,11 @@ const JobSearchFilters = () => {
           </div>
         </div>
       )}
+
+
+
     </div>
+    
   )
 }
 
