@@ -50,7 +50,7 @@ const CATEGORIES = [
     count: 165,
     icon: FiBarChart2,
     bg: 'bg-[#dbeafe] dark:bg-[#dbeafe]/40',
-    iconColor: 'text-[#ffffff] dark:text-[#ffffff]',
+    iconColor: 'text-[#2166fc] dark:text-[#2166fc]',
   },
     {
     name: 'Sales',
@@ -72,36 +72,36 @@ const CATEGORIES = [
 
 export default function ExploreByCategory() {
   return (
-    <section className="w-full py-16 px-6 bg-gray-50 dark:bg-gray-950">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="w-full py-16 px-6 bg-gray-50 dark:bg-gray-950!">
+      <div className=" mx-auto text-center p-10 lg:p-20">
         {/* Eyebrow pill */}
-        <span className="inline-block bg-indigo-100 dark:bg-indigo-900/40 text-[#4c42dc] dark:text-[#8f7ff5] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+        <span className="inline-block bg-indigo-100 dark:bg-indigo-900/40! text-[#4c42dc] dark:text-[#8f7ff5]! text-2xl font-semibold px-4 py-1.5 rounded-full mb-4">
           Browse Categories
         </span>
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white! mb-10">
           Explore by Category
         </h2>
 
         {/* Subtext */}
-        <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+        <p className="mt-10 text-gray-500 dark:text-gray-400! text-center  mx-auto">
           Find opportunities across the most in-demand fields and industries.
         </p>
 
         {/* Category grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {CATEGORIES.map(({ name, slug, count, icon: Icon, bg, iconColor }) => (
             <Link
               key={slug}
               to={`/jobs?category=${encodeURIComponent(slug)}`}
-              className="group text-left bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+              className="group w-full text-left bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl p-12 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
             >
               <div className={`h-12 w-12 rounded-xl flex items-center justify-center ${bg}`}>
-                <Icon size={22} className={iconColor} />
+                <Icon size={35} className={iconColor} />
               </div>
 
-              <h3 className="mt-4 font-bold text-gray-900 dark:text-white group-hover:text-[#4c42dc] dark:group-hover:text-[#8f7ff5] transition-colors">
+              <h3 className="mt-4 text-3xl font-bold text-gray-900 dark:text-white! group-hover:text-[#4c42dc] dark:group-hover:text-[#8f7ff5]! transition-colors">
                 {name}
               </h3>
 
