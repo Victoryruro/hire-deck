@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import icon from "../assets/hero.png"
+import icon from "../assets/Hiredesklogo2.png"
+import { FiArrowRight, FiMapPin } from 'react-icons/fi'
 
 
 const CATEGORIES = [
   {
     name: 'TechFlow Inc.',
-    slug: 'Technology',
-    type :'Software Development',
+    slug:'Software Development',
     count: 24,
     location:"San Francisco , CA",
     icon: icon,
@@ -14,49 +14,44 @@ const CATEGORIES = [
   },
   {
     name: 'DesignCraft Studio',
-    slug: 'Technology',
-    type :'Creative Agency',
+    slug:'Creative Agency',
     count: 12,
     location:"New York,NY",
     icon: icon,
   },
   {
     name: 'DataVault Analytics',
-    slug: 'Technology',
-    type :'Data &  Analytics',
+    slug:'Data &  Analytics',
     count: 18,
     location:"Seattle, WA",
     icon: icon,
   },
   {
     name: 'CloudPeak Systems',
-    slug: 'Technology',
-    type :'Cloud Infastructure',
+    slug:'Cloud Infastructure',
     count: 31,
     location:"Austin , TX",
     icon: icon,
   },
   {
     name: 'GrowthLab Marketing',
-    slug: 'Technology',
-    type :'Digital',
+    slug:'Digital',
     count: 9,
     location:"Remote",
     icon: icon,
   },
   {
     name: 'FinEdge Capital',
-    slug: 'Technology',
-    type :'Financial Services',
+    slug:'Financial Services',
     count: 15,
     location:"Chicago",
     icon: icon,
   },
 ]
 
-export default function ExploreByCategory() {
+export default function CompanyHire() {
   return (
-    <section className="w-full py-16 px-6 bg-[#ffffff] dark:bg-[#030712] !">
+    <section className="w-full py-16 px-6 bg-[#ffffff] dark:bg-[#030712]/90!">
       <div className=" mx-auto text-center p-20">
         {/* Eyebrow pill */}
         <span className="inline-block bg-indigo-100 dark:bg-indigo-900/40! text-[#4c42dc] dark:text-[#8f7ff5]! text-2xl font-semibold px-4 py-1.5 rounded-full mb-4">
@@ -75,30 +70,43 @@ export default function ExploreByCategory() {
 
         {/* Category grid */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-          {CATEGORIES.map(({ name, slug,location, count, icon: Icon, bg, iconColor }) => (
+          {CATEGORIES.map(({ name, slug,location, count, icon, bg, }) => (
             <Link
               key={slug}
               to={`/jobs?category=${encodeURIComponent(slug)}`}
-              className="group w-full text-left bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl p-12 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+              className="group w-full text-center flex flex-col items-center justify-center bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl p-12 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
             >
-              <div className={`h-12 w-12 rounded-xl flex items-center justify-center ${bg}`}>
-                <Icon size={35} className={iconColor} />
+              <div className={`p-2 w-34 rounded-xl  dark:bg-[#6ee494]! `}>
+                <img src={icon} alt="icon" width={150} />
               </div>
 
               <h3 className="mt-4 text-3xl font-bold text-gray-900 dark:text-white! group-hover:text-[#4c42dc] dark:group-hover:text-[#8f7ff5]! transition-colors">
                 {name}
               </h3>
-              <span className="flex items-center gap-1">
+              <h5 className="mt-2 text-xl font-extralight text-gray-900 dark:text-white! group-hover:text-[#4c42dc] dark:group-hover:text-[#8f7ff5]! transition-colors">
+                {slug}
+              </h5>
+              <span className="flex items-center gap-1 mt-5 mb-7 dark:text-white!">
                     <FiMapPin size={14} />
                     {location}
               </span>
 
-              <p className="mt-1 text-sm text-[#6ee494] bg-[#0b3331] p-4 rounded-2xl ">
+              <p className="mt-3 px-8 text-sm text-[#0b3331] bg-[#6ee494]/40 dark:bg-[#6ee494]! p-3 rounded-2xl ">
                 {count.toLocaleString()} open positions
               </p>
             </Link>
           ))}
         </div>
+        <div className='flex items-center flex-col pb-18 mt-8 '>
+            <button
+            //   onClick={handleSearch}
+            className=" flex items-center px-12 py-4 text-[#4c42dc] font-semibold text-2xl rounded-2xl shadow-gray-400 hover:opacity-90 transition-all "
+            >
+            View all Companies <FiArrowRight size={20}/>
+            </button>                
+        </div>
+
+
       </div>
     </section>
   )
