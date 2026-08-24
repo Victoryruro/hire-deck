@@ -3,6 +3,7 @@ import JobSearchFilters from '../Component/JobSearch'
 import StatsBar from '../Component/DotForHome'
 import Stat from '../Component/Stats'
 import JobsDisplay from '../Component/JobsSection/JobDisplay'
+import ExploreByCategory from '../Component/Category'
 
 const jobDesc = ['React Developer', 'Product Manager', 'UX Designer', 'Data Scientist',  'DevOps Engineer', "Marketing Lead"]
 
@@ -30,6 +31,7 @@ const Home = () => {
         <Stat/>
         <hr className=' border-gray-300 dark:border-black!' />
         <JobsDisplay/>
+        <ExploreByCategory/>
     </>
   )
 }

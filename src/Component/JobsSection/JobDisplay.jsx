@@ -96,7 +96,7 @@ export default function JobsDisplay() {
             <div className='flex items-center flex-col pb-18 '>
                 <button
                 //   onClick={handleSearch}
-                className=" flex items-center px-9 py-3 bg-[#4c42dc] text-white font-semibold rounded-xl shadow-gray-400 hover:opacity-90 transition-all "
+                className=" flex items-center px-12 py-4 bg-[#4c42dc] text-white font-semibold text-xl rounded-2xl shadow-gray-400 hover:opacity-90 transition-all "
                 >
                 View all Jobs <FiArrowRight size={16}/>
                 </button>                
