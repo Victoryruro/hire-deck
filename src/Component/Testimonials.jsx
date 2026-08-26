@@ -10,14 +10,14 @@ const TESTIMONIALS = [
     role: 'Senior Software Engineer',
   },
   {
-    rating: 5,
+    rating: 3,
     quote:
       'As a hiring manager, HireDesk has transformed our recruitment process. We reduced our time-to-hire by 60% and the quality of candidates is exceptional.',
     name: 'Marcus Rodriguez',
     role: 'VP of Engineering, TechFlow',
   },
   {
-    rating: 5,
+    rating: 4,
     quote:
       'The platform made my career transition from finance to tech seamless. The personalized recommendations were spot-on and helped me land a role I love.',
     name: 'Aisha Patel',
@@ -56,17 +56,17 @@ export default function Testimonials() {
   const goNext = () => setIndex((i) => Math.min(i + 1, maxIndex))
 
   return (
-    <section className="w-full py-16 px-6 bg-white dark:bg-gray-950">
-      <div className="max-w-6xl mx-auto text-center">
-        <span className="inline-block bg-indigo-100 dark:bg-indigo-900/40 text-[#4c42dc] dark:text-[#8f7ff5] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+    <section className="w-full py-16 px-6 bg-white dark:bg-gray-950!">
+      <div className="p-10 mx-auto text-center">
+        <span className="inline-block bg-indigo-100 dark:bg-indigo-900/40! text-[#4c42dc] dark:text-[#8f7ff5]! text-lg font-semibold px-4 py-1.5 rounded-full mb-4">
           Testimonials
         </span>
 
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white! mb-3">
           Success Stories
         </h2>
 
-        <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+        <p className="mt-3 text-gray-500 dark:text-gray-400!  mx-auto text-lg">
           Hear from job seekers and employers who found their perfect match on HireDesk.
         </p>
 
@@ -76,9 +76,9 @@ export default function Testimonials() {
           <button
             onClick={goPrev}
             disabled={index === 0}
-            className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-500 dark:text-gray-300 hover:text-[#4c42dc] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800! shadow-md text-gray-500 dark:text-gray-300! hover:text-[#4c42dc] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
           >
-            <FiChevronLeft size={20} />
+            <FiChevronLeft size={30} />
           </button>
 
           {/* Track */}
@@ -92,20 +92,20 @@ export default function Testimonials() {
                   key={t.name}
                   className="w-full md:w-1/3 shrink-0 px-3"
                 >
-                  <div className="h-full text-left bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 flex flex-col">
+                  <div className="h-full text-left text-lg bg-gray-50 dark:bg-gray-900! border border-gray-100 dark:border-gray-800! rounded-2xl p-10 flex flex-col">
                     <div className="flex gap-1 text-yellow-400">
                       {Array.from({ length: t.rating }).map((_, i) => (
-                        <FiStar key={i} size={16} fill="currentColor" />
+                        <FiStar key={i} size={20} fill="currentColor" />
                       ))}
                     </div>
 
-                    <p className="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
+                    <p className="mt-4 text-gray-600 dark:text-gray-300! leading-relaxed flex-1 text-xl">
                       “{t.quote}”
                     </p>
 
-                    <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                      <p className="font-bold text-gray-900 dark:text-white">{t.name}</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{t.role}</p>
+                    <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700!">
+                      <p className="font-bold text-gray-900 dark:text-white!">{t.name}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400!">{t.role}</p>
                     </div>
                   </div>
                 </div>
@@ -117,9 +117,9 @@ export default function Testimonials() {
           <button
             onClick={goNext}
             disabled={index === maxIndex}
-            className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-500 dark:text-gray-300 hover:text-[#4c42dc] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 h-10 w-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800! shadow-md text-gray-500 dark:text-gray-300! hover:text-[#4c42dc] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
           >
-            <FiChevronRight size={20} />
+            <FiChevronRight size={30} />
           </button>
         </div>
 
@@ -132,8 +132,8 @@ export default function Testimonials() {
               aria-label={`Go to slide ${i + 1}`}
               className={`h-2 rounded-full transition-all duration-300 ${
                 i === index
-                  ? 'w-6 bg-linear-to-r from-[#4c42dc] to-[#7123bb]'
-                  : 'w-2 bg-gray-300 dark:bg-gray-600'
+                  ? 'w-6 bg-linear-to-r from-[#4c42dc] to-[#4c42dc]'
+                  : 'w-2 bg-gray-300 dark:bg-gray-600!'
               }`}
             />
           ))}
