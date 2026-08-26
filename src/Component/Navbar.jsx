@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
       <nav className="w-full fixed paddingLeftRight p-6 top-0 left-0 z-50 bg-primary-400 dark:bg-gray-900 transition-colors duration-300">
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-4 lg:px-8">
           <div className="flex justify-around items-center h-16">
             
             {/* <!-- Logo --> */}
@@ -23,17 +23,17 @@ const Header = () => {
             </div>
 
             {/* <!-- Desktop Menu --> */}
-            <div className="hidden md:flex space-x-8 font-semibold ml-auto">
-              <Link to="/#hero" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-xl">Jobs</Link>
-              <Link to="/About#shop" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-xl">Companies</Link>
-              <Link to="/About#about" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-xl">About</Link>
-              <Link to="/Pricing" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-xl">Pricing</Link>
-              <Link to="/Blog" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-xl">Blog</Link>
-              <Link to="/Contact" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-xl">Contact</Link>
+            <div className="hidden lg:flex space-x-8 font-semibold ml-auto">
+              <Link to="/#hero" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Jobs</Link>
+              <Link to="/About#shop" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Companies</Link>
+              <Link to="/About#about" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">About</Link>
+              <Link to="/Pricing" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Pricing</Link>
+              <Link to="/Blog" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Blog</Link>
+              <Link to="/Contact" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Contact</Link>
             </div>
 
             {/* <!-- Call to Action + Theme Toggle --> */}
-            <div className="hidden md:flex items-center gap-4 ml-auto">
+            <div className="hidden lg:flex items-center gap-4 ml-auto">
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle theme"
@@ -48,7 +48,7 @@ const Header = () => {
             </div>
 
             {/* <!-- Mobile Menu Button + Theme Toggle --> */}
-            <div className="md:hidden flex items-center gap-4">
+            <div className="flex lg:hidden  items-center gap-10">
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle theme"
@@ -56,6 +56,9 @@ const Header = () => {
               >
                 {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
               </button>
+              <Link to="/PostAJob" className="px-4 py-2 bg-primary-50 rounded-md text-white font-semibold text-xl hover:bg-primary-50 transition-all">
+                Post a Job
+              </Link>
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -71,7 +74,7 @@ const Header = () => {
 
         {/* <!-- Mobile Menu --> */}
         {isOpen && (
-          <div id="mobile-menu" className="md:hidden px-4 pb-4 flex flex-col gap-7 bg-primary-400 dark:bg-gray-900">
+          <div id="mobile-menu" className="  px-4 pb-4 flex flex-col gap-7 lg:hidden bg-primary-400 dark:bg-gray-900">
               <Link onClick={() => setIsOpen(false)} to="/#hero" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Home</Link>
               <Link onClick={() => setIsOpen(false)} to="/About#shop" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Shop</Link>
               <Link onClick={() => setIsOpen(false)} to="/About#about" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">About</Link>

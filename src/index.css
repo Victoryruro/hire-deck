@@ -6,16 +6,16 @@
   --color-primary-50: #473dd3;
   --color-primary-400: #ffffff;
   --color-primary-500: #111827;
+  --breakpoint-nav: 900px;
 }
-
 
 body {
   margin: 0;
   
 }
 .paddingLeftRight {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 #root {
   /* height: 100vh; */
