@@ -71,7 +71,7 @@ export default function HowItWorks() {
         <div className="inline-flex items-center bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-full p-1 mt-8">
           <button
             onClick={() => setActiveTab('seekers')}
-            className={`px-5 py-2 rounded-full text-lg font-semibold transition-all ${
+            className={`px-5 py-2 rounded-full text-xl font-semibold transition-all ${
               activeTab === 'seekers'
                 ? 'bg-linear-to-r from-[#4c42dc] to-[#4c42dc] text-white'
                 : 'text-gray-600 dark:text-gray-300!'
@@ -81,7 +81,7 @@ export default function HowItWorks() {
           </button>
           <button
             onClick={() => setActiveTab('employers')}
-            className={`px-5 py-2 rounded-full text-lg font-semibold transition-all ${
+            className={`px-5 py-2 rounded-full text-xl font-semibold transition-all ${
               activeTab === 'employers'
                 ? 'bg-linear-to-r from-[#4c42dc] to-[#4c42dc] text-white'
                 : 'text-gray-600 dark:text-gray-300!'
