@@ -90,7 +90,7 @@ export default function Testimonials() {
               {TESTIMONIALS.map((t) => (
                 <div
                   key={t.name}
-                  className="w-full md:w-1/3 shrink-0 px-3"
+                  className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 shrink-0 px-3"
                 >
                   <div className="h-full text-left text-lg bg-gray-50 dark:bg-gray-900! border border-gray-300 dark:border-gray-800! rounded-2xl p-10 flex flex-col gap-4">
                     <div className="flex gap-1 text-yellow-400">
