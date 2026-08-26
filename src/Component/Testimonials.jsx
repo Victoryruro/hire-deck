@@ -62,11 +62,11 @@ export default function Testimonials() {
           Testimonials
         </span>
 
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white! mb-3">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white! mb-3">
           Success Stories
         </h2>
 
-        <p className="mt-3 text-gray-500 dark:text-gray-400!  mx-auto text-lg">
+        <p className="mt-3 text-gray-500 dark:text-gray-400!  mx-auto text-xl">
           Hear from job seekers and employers who found their perfect match on HireDesk.
         </p>
 
@@ -92,19 +92,19 @@ export default function Testimonials() {
                   key={t.name}
                   className="w-full md:w-1/3 shrink-0 px-3"
                 >
-                  <div className="h-full text-left text-lg bg-gray-50 dark:bg-gray-900! border border-gray-100 dark:border-gray-800! rounded-2xl p-10 flex flex-col">
+                  <div className="h-full text-left text-lg bg-gray-50 dark:bg-gray-900! border border-gray-300 dark:border-gray-800! rounded-2xl p-10 flex flex-col gap-4">
                     <div className="flex gap-1 text-yellow-400">
                       {Array.from({ length: t.rating }).map((_, i) => (
                         <FiStar key={i} size={20} fill="currentColor" />
                       ))}
                     </div>
 
-                    <p className="mt-4 text-gray-600 dark:text-gray-300! leading-relaxed flex-1 text-xl">
+                    <p className="mt-4 text-gray-600 dark:text-gray-300! leading-relaxed flex-1 text-[22px]">
                       “{t.quote}”
                     </p>
 
                     <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700!">
-                      <p className="font-bold text-gray-900 dark:text-white!">{t.name}</p>
+                      <p className="font-bold text-gray-900 dark:text-white! text-xl">{t.name}</p>
                       <p className="text-sm text-gray-500 dark:text-gray-400!">{t.role}</p>
                     </div>
                   </div>
@@ -130,10 +130,10 @@ export default function Testimonials() {
               key={i}
               onClick={() => setIndex(i)}
               aria-label={`Go to slide ${i + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
+              className={`h-3 rounded-full transition-all duration-300 ${
                 i === index
-                  ? 'w-6 bg-linear-to-r from-[#4c42dc] to-[#4c42dc]'
-                  : 'w-2 bg-gray-300 dark:bg-gray-600!'
+                  ? 'w-7 bg-linear-to-r from-[#4c42dc] to-[#4c42dc]'
+                  : 'w-3 bg-gray-300 dark:bg-gray-600!'
               }`}
             />
           ))}
