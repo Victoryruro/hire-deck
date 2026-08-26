@@ -9,7 +9,7 @@ import { FaInstagram, FaFacebook, FaTwitter, FaTiktok, FaLinkedin } from 'react-
 const Footer = () => {
   return (
     <>
-      <footer className="bg-primary-500 text-gray-500 py-8 mt-16 paddingLeftRight pt-12">
+      <footer className="bg-primary-500 text-gray-500 py-8  paddingLeftRight pt-12">
           <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6  text-2xl font-semibold text-left">
                   {/* <!-- Footer Left: Logo and Description --> */}

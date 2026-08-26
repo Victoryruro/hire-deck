@@ -8,6 +8,7 @@ import CompanyHire from '../Component/CompanyHire'
 import HowItWorks from '../Component/HowItWorks'
 import Testimonials from '../Component/Testimonials'
 import Faq from '../Component/Faq'
+import { FinalCtaSection, JobAlertsSection } from '../Component/JobAlert'
 
 const jobDesc = ['React Developer', 'Product Manager', 'UX Designer', 'Data Scientist',  'DevOps Engineer', "Marketing Lead"]
 
@@ -40,6 +41,8 @@ const Home = () => {
         <HowItWorks/>
         <Testimonials/>
         <Faq/>
+        <JobAlertsSection/>
+        <FinalCtaSection/>
     </>
   )
 }

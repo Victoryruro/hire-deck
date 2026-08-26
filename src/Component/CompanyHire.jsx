@@ -69,7 +69,7 @@ export default function CompanyHire() {
         </p>
 
         {/* Category grid */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        <div className="mt-10 grid grid-cols-1  lg:grid-cols-3 gap-6 w-full">
           {CATEGORIES.map(({ name, slug,location, count, icon, bg, }) => (
             <Link
               key={slug}

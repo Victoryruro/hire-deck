@@ -93,7 +93,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
           {steps.map((step, index) => (
             <div key={step.number} className="relative">
               
@@ -118,7 +118,7 @@ export default function HowItWorks() {
 
               {/* Arrow connector - hidden on mobile, hidden after last card */}
               {index < steps.length - 1 && (
-                <div className="hidden md:flex absolute top-1/2 -right-5 -translate-y-1/2 z-10 text-gray-500 dark:text-gray-600">
+                <div className="hidden lg:flex absolute top-1/2 -right-5 -translate-y-1/2 z-10 text-gray-500 dark:text-gray-600">
                   <FiArrowRight size={35} />
                 </div>
               )}
