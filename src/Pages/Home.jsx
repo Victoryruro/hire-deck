@@ -6,6 +6,7 @@ import JobsDisplay from '../Component/JobsSection/JobDisplay'
 import ExploreByCategory from '../Component/Category'
 import CompanyHire from '../Component/CompanyHire'
 import HowItWorks from '../Component/HowItWorks'
+import Testimonials from '../Component/Testimonials'
 
 const jobDesc = ['React Developer', 'Product Manager', 'UX Designer', 'Data Scientist',  'DevOps Engineer', "Marketing Lead"]
 
@@ -36,6 +37,7 @@ const Home = () => {
         <ExploreByCategory/>
         <CompanyHire/>
         <HowItWorks/>
+        <Testimonials/>
     </>
   )
 }

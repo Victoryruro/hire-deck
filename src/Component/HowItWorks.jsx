@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FiArrowRight } from 'react-icons/fi'
+import { motion } from 'motion/react'
 
 const STEPS = {
   seekers: [
@@ -95,7 +96,13 @@ export default function HowItWorks() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 relative">
           {steps.map((step, index) => (
             <div key={step.number} className="relative">
-              <div className="text-left bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl  h-full p-12">
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 32 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.7, delay: index * 0.1, ease: 'easeOut' }}
+                className="text-left bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl  h-full p-12">
                 <span className="inline-flex items-center justify-center h-15 w-15 rounded-lg bg-indigo-100 dark:bg-indigo-900/40 text-[#4c42dc] dark:text-[#8f7ff5]! font-bold text-2xl">
                   {step.number}
                 </span>
@@ -107,7 +114,7 @@ export default function HowItWorks() {
                 <p className="mt-2 text-2xl text-gray-500 dark:text-gray-400! leading-relaxed">
                   {step.description}
                 </p>
-              </div>
+              </motion.div>
 
               {/* Arrow connector - hidden on mobile, hidden after last card */}
               {index < steps.length - 1 && (
