@@ -24,7 +24,7 @@ const Header = () => {
 
             {/* <!-- Desktop Menu --> */}
             <div className="hidden lg:flex space-x-8 font-semibold ml-auto">
-              <Link to="/#hero" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Jobs</Link>
+              <Link to="/Job" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Jobs</Link>
               <Link to="/About#shop" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Companies</Link>
               <Link to="/About#about" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">About</Link>
               <Link to="/Pricing" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Pricing</Link>
@@ -75,7 +75,7 @@ const Header = () => {
         {/* <!-- Mobile Menu --> */}
         {isOpen && (
           <div id="mobile-menu" className="  px-4 pb-4 flex flex-col gap-7 lg:hidden bg-primary-400 dark:bg-gray-900">
-              <Link onClick={() => setIsOpen(false)} to="/#hero" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Home</Link>
+              <Link onClick={() => setIsOpen(false)} to="/Job" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Home</Link>
               <Link onClick={() => setIsOpen(false)} to="/About#shop" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Shop</Link>
               <Link onClick={() => setIsOpen(false)} to="/About#about" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">About</Link>
               <Link onClick={() => setIsOpen(false)} to="/Menu" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Menu</Link>
