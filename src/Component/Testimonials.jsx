@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FiChevronLeft, FiChevronRight, FiStar } from 'react-icons/fi'
 
 const TESTIMONIALS = [
@@ -44,13 +44,36 @@ const TESTIMONIALS = [
     name: 'David Kim',
     role: 'Freelance Developer',
   },
+    {
+    rating: 5,
+    quote:
+      'Clean, fast, and actually useful filters. I found a remote contract role that fit perfectly around my schedule.',
+    name: 'David Kim',
+    role: 'Freelance Developer',
+  },
+  
 ]
 
 const VISIBLE_DESKTOP = 3
 
 export default function Testimonials() {
-  const maxIndex = TESTIMONIALS.length - VISIBLE_DESKTOP
+  const [visibleCount, setVisibleCount] = useState(() =>
+    typeof window !== 'undefined' && window.innerWidth >= 1024 ? VISIBLE_DESKTOP : 1,
+  )
   const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      setVisibleCount(window.innerWidth >= 1024 ? VISIBLE_DESKTOP : 1)
+    }
+
+    updateVisibleCount()
+    window.addEventListener('resize', updateVisibleCount)
+
+    return () => window.removeEventListener('resize', updateVisibleCount)
+  }, [])
+
+  const maxIndex = TESTIMONIALS.length - visibleCount
 
   const goPrev = () => setIndex((i) => Math.max(i - 1, 0))
   const goNext = () => setIndex((i) => Math.min(i + 1, maxIndex))
@@ -85,12 +108,13 @@ export default function Testimonials() {
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${index * (100 / VISIBLE_DESKTOP)}%)` }}
+              style={{ transform: `translateX(-${index * (100 / visibleCount)}%)` }}
             >
               {TESTIMONIALS.map((t) => (
                 <div
                   key={t.name}
-                  className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 shrink-0 px-3"
+                  className="shrink-0 px-3"
+                  style={{ flex: `0 0 ${100 / visibleCount}%` }}
                 >
                   <div className="h-full text-left text-lg bg-gray-50 dark:bg-gray-900! border border-gray-300 dark:border-gray-800! rounded-2xl p-10 flex flex-col gap-4">
                     <div className="flex gap-1 text-yellow-400">
