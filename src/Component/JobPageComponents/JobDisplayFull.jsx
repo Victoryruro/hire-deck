@@ -132,7 +132,7 @@ export default function JobDisplayFull() {
                     <p>Showing {jobs.length} jobs</p>
                     <select
 
-                    className="bg-gray-50 dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-9 py-2.5 text-md text-gray-700 dark:text-white! outline-none cursor-pointer text-center"
+                    className="bg-gray-50 dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-9 py-2.5 text-md text-gray-700 dark:text-white! outline-none cursor-pointer text-center  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                     >
                         <option value="MostRecent" className="text-gray-700 dark:text-white">Most Recent</option>
                         <option value="HighSalary" className="text-gray-700 dark:text-white">Highest Salary</option>

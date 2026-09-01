@@ -3,7 +3,7 @@ import icon from "../assets/Hiredesklogo2.png"
 import { FiArrowRight, FiMapPin } from 'react-icons/fi'
 
 
-const CATEGORIES = [
+export const CATEGORIES = [
   {
     name: 'TechFlow Inc.',
     slug:'Software Development',
@@ -47,6 +47,48 @@ const CATEGORIES = [
     location:"Chicago",
     icon: icon,
   },
+    {
+    name: 'FinEdge Capital',
+    slug:'Financial Services',
+    count: 15,
+    location:"Chicago",
+    icon: icon,
+  },
+    {
+    name: 'FinEdge Capital',
+    slug:'Financial Services',
+    count: 15,
+    location:"Chicago",
+    icon: icon,
+  },
+    {
+    name: 'DesignCraft Studio',
+    slug:'Creative Agency',
+    count: 12,
+    location:"New York,NY",
+    icon: icon,
+  },
+    {
+    name: 'DesignCraft Studio',
+    slug:'Creative Agency',
+    count: 12,
+    location:"New York,NY",
+    icon: icon,
+  },
+    {
+    name: 'DesignCraft Studio',
+    slug:'Creative Agency',
+    count: 12,
+    location:"New York,NY",
+    icon: icon,
+  },
+    {
+    name: 'CloudPeak Systems',
+    slug:'Cloud Infastructure',
+    count: 31,
+    location:"Austin , TX",
+    icon: icon,
+  },
 ]
 
 export default function CompanyHire() {
@@ -70,7 +112,7 @@ export default function CompanyHire() {
 
         {/* Category grid */}
         <div className="mt-10 grid grid-cols-1  lg:grid-cols-3 gap-6 w-full">
-          {CATEGORIES.map(({ name, slug,location, count, icon, bg, }) => (
+          {CATEGORIES.slice(0, 6).map(({ name, slug,location, count, icon, bg, }) => (
             <Link
               key={slug}
               to={`/jobs?category=${encodeURIComponent(slug)}`}

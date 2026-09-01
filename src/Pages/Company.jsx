@@ -1,5 +1,7 @@
 import React from 'react'
 import PageHero from '../Component/JobPageComponents/PageHero'
+import CompanyDisplay from '../Component/CompanyPageComponents/CompanyDisplay'
+
 
 const Company = () => {
   return (
@@ -12,6 +14,11 @@ const Company = () => {
                 { label: 'Company' },
             ]}
         />
+        <div className='w-full grid grid-cols-1  gap-5 dark:bg-black!' >
+
+            <CompanyDisplay/>
+        
+        </div>
     </>
   )
 }

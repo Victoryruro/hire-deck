@@ -4,13 +4,13 @@ import { FiChevronRight } from 'react-icons/fi'
 export default function PageHero({ title, subtitle, breadcrumbs = [] }) {
   return (
     <section className="w-full pt-40 pb-16 px-6 bg-linear-to-br from-[#4c42dc] to-[#3730c9] dark:to-[#0b0925]! text-center">
-      <div className="max-w-3xl mx-auto p-12 ">
-        <h1 className="text-5xl md:text-8xl font-bold text-white leading-tight">
+      <div className="max-w-3xl mx-auto p-8 mb-5 ">
+        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-5">
           {title}
         </h1>
 
         {subtitle && (
-          <p className="mt-4 text-indigo-100 text-lg md:text-xl text-nowrap leading-relaxed">
+          <p className="mt-4 text-indigo-100 text-lg md:text-xl  leading-relaxed">
             {subtitle}
           </p>
         )}

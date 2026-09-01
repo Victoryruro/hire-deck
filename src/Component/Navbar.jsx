@@ -25,7 +25,7 @@ const Header = () => {
             {/* <!-- Desktop Menu --> */}
             <div className="hidden lg:flex space-x-8 font-semibold ml-auto">
               <Link to="/Job" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Jobs</Link>
-              <Link to="/About#shop" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Companies</Link>
+              <Link to="/Company" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Companies</Link>
               <Link to="/About#about" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">About</Link>
               <Link to="/Pricing" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Pricing</Link>
               <Link to="/Blog" className="text-gray-500 dark:text-gray-300  hover:text-black dark:hover:text-white! transition text-base">Blog</Link>
@@ -56,7 +56,7 @@ const Header = () => {
               >
                 {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
               </button>
-              <Link to="/PostAJob" className="px-4 py-2 bg-primary-50 rounded-md text-white font-semibold text-xl hover:bg-primary-50 transition-all">
+              <Link to="/PostAJob" className="hidden sm:block px-4 py-2 bg-primary-50 rounded-md text-white font-semibold text-xl hover:bg-primary-50 transition-all">
                 Post a Job
               </Link>
 
@@ -64,7 +64,7 @@ const Header = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen}
                 aria-controls="mobile-menu"
-                className="text-gray-900 dark:text-white focus:outline-none"
+                className="text-gray-900 dark:text-white! focus:outline-none"
               >
                 <FiMenu size={24} />
               </button>
@@ -74,12 +74,12 @@ const Header = () => {
 
         {/* <!-- Mobile Menu --> */}
         {isOpen && (
-          <div id="mobile-menu" className="  px-4 pb-4 flex flex-col gap-7 lg:hidden bg-primary-400 dark:bg-gray-900">
-              <Link onClick={() => setIsOpen(false)} to="/Job" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Home</Link>
-              <Link onClick={() => setIsOpen(false)} to="/About#shop" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Shop</Link>
-              <Link onClick={() => setIsOpen(false)} to="/About#about" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">About</Link>
-              <Link onClick={() => setIsOpen(false)} to="/Menu" className="text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-white transition text-xl">Menu</Link>
-            <Link onClick={() => setIsOpen(false)} to="/About#contact" className="block mt-2 px-4 py-2 bg-primary-50 text-gray-900 rounded-md text-xl text-center hover:bg-primary-50 transition-all w-1/2 mx-auto font-semibold">Contact Us</Link>
+          <div id="mobile-menu" className="  px-4 pb-4 flex flex-col gap-7 lg:hidden bg-primary-400 dark:bg-gray-900! ">
+              <Link onClick={() => setIsOpen(false)} to="/Job" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Job</Link>
+              <Link onClick={() => setIsOpen(false)} to="/Company" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Companies</Link>
+              <Link onClick={() => setIsOpen(false)} to="/About#about" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">About</Link>
+              <Link onClick={() => setIsOpen(false)} to="/Menu" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Menu</Link>
+            <Link onClick={() => setIsOpen(false)} to="/About#contact" className="block mt-2 px-4 py-2 bg-primary-50 text-gray-900 dark:text-white! rounded-md text-xl text-center hover:bg-primary-50 transition-all w-1/2 mx-auto font-semibold">Contact Us</Link>
           </div>
         )}
       </nav>

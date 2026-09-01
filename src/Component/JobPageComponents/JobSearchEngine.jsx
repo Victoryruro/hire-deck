@@ -47,7 +47,7 @@ const JobSearchEngine = () => {
             placeholder="Job title"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
-            className=" p-3  outline-none text-lg text-gray-700 bg-gray-50 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-8 py-3 "
+            className=" p-3  outline-none text-lg text-gray-700 bg-gray-50 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-8 py-3  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 "
           />
         </div>
         <div className=" items-center gap-2 mt-7">
@@ -57,7 +57,7 @@ const JobSearchEngine = () => {
             placeholder="City or Remote"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            className=" p-3  outline-none text-lg text-gray-700 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-8 py-3 "
+            className=" p-3  outline-none text-lg text-gray-700 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-8 py-3  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 "
           />
         </div>
         <div className=" items-center gap-2 ">
