@@ -9,7 +9,7 @@ const Faq = () => {
                 FAQS
             </span>
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white! sm:text-5xl p-3.5 ">Frequently Asked Questions</h1>
-            <p className="mt-3 text-gray-500 dark:text-gray-400!  mx-auto text-xl mb-5">Everything you need to know about finding jobs and hiring on HireHub.</p>
+            <p className="mt-3 text-gray-500 dark:text-gray-400!  mx-auto text-xl mb-5">Everything you need to know about finding jobs and hiring on HireDesk.</p>
             <motion.details 
                 initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}

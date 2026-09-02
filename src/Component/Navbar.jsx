@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="w-full fixed paddingLeftRight p-6 top-0 left-0 z-50 bg-primary-400 dark:bg-gray-900 transition-colors duration-300">
+      <nav className="w-full fixed paddingLeftRight p-6 top-0 left-0 z-50 bg-primary-400 dark:bg-gray-900 transition-colors duration-300 shadow-md ">
         <div className="max-w-full mx-auto px-4 sm:px-4 lg:px-8">
           <div className="flex justify-around items-center h-16">
             

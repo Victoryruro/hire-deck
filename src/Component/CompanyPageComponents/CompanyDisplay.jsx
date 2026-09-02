@@ -9,7 +9,7 @@ export default function CompanyDisplay() {
         <>
             <div className="flex flex-col-reverse md:flex-row items-center gap-5  justify-between p-10 ">
                 <div>
-                    <input type="text" placeholder="Search for companies..." className="w-75 md:w-150 p-4 rounded-lg  text-gray-700 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700!  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 " />
+                    <input type="text" placeholder="Search for companies..." className="w-75 md:w-150 p-4 rounded-lg  text-gray-700 dark:text-white! dark:bg-gray-800! border-2 text-xl border-gray-400 dark:border-gray-700!  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 " />
                 </div>
                 <p className='text-lg dark:text-white!'> <span className="font-bold">{CATEGORIES.length}</span> Companies Hiring</p>
                               
