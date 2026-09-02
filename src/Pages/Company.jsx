@@ -9,6 +9,7 @@ const Company = () => {
     <>
         <PageHero
             title="Company Directory"
+            id="company"
             subtitle="Explore top employers and discover your next workplace. Learn about company culture, benefits, and open positions."
             breadcrumbs={[
                 { label: 'Home', href: '/' },
