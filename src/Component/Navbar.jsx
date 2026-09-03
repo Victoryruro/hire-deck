@@ -79,7 +79,7 @@ const Header = () => {
               <Link onClick={() => setIsOpen(false)} to="/Company" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Companies</Link>
               <Link onClick={() => setIsOpen(false)} to="/About" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">About</Link>
               <Link onClick={() => setIsOpen(false)} to="/Pricing" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Pricing</Link>
-            <Link onClick={() => setIsOpen(false)} to="/About#contact" className="block mt-2 px-4 py-2 bg-primary-50 text-gray-900 dark:text-white! rounded-md text-xl text-center hover:bg-primary-50 transition-all w-1/2 mx-auto font-semibold">Contact Us</Link>
+              <Link onClick={() => setIsOpen(false)} to="/Contact" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Contact</Link>
           </div>
         )}
       </nav>
