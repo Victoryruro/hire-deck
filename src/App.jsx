@@ -6,6 +6,7 @@ import Home from './Pages/Home'
 import Job from './Pages/Job'
 import Company from './Pages/Company'
 import About from './Pages/About'
+import Pricing from './Pages/Pricing'
 // import Menu from './Pages/Menu'
 // import Contact from './Pages/Contact'
 import './App.css'
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Job" element={<Job />} />
           <Route path="/Company" element={<Company />} />
           <Route path="/About" element={<About />} />
+          <Route path="/Pricing" element={<Pricing />} />
           {/* <Route path="/Menu" element={<Menu />} /> */}
           {/* <Route path="/Contact" element={<Contact />} /> */}
         </Routes>
