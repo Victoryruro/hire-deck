@@ -4,7 +4,7 @@ import { FiChevronRight } from 'react-icons/fi'
 export default function PageHero({ title, subtitle, breadcrumbs = [] }) {
   return (
     <section className="w-full pt-40 pb-16 px-6 bg-linear-to-br from-[#4c42dc] to-[#3730c9] dark:to-[#0b0925]! text-center">
-      <div className="max-w-3xl mx-auto p-8 mb-5 ">
+      <div className="max-w-4xl mx-auto p-8 mb-5 ">
         <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-5">
           {title}
         </h1>

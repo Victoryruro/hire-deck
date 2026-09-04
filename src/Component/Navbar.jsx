@@ -80,6 +80,7 @@ const Header = () => {
               <Link onClick={() => setIsOpen(false)} to="/About" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">About</Link>
               <Link onClick={() => setIsOpen(false)} to="/Pricing" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Pricing</Link>
               <Link onClick={() => setIsOpen(false)} to="/Contact" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Contact</Link>
+              <Link onClick={() => setIsOpen(false)} to="/Blog" className="text-gray-900 dark:text-gray-100! hover:text-gray-700 dark:hover:text-white transition text-xl">Blog</Link>
           </div>
         )}
       </nav>

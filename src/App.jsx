@@ -7,8 +7,9 @@ import Job from './Pages/Job'
 import Company from './Pages/Company'
 import About from './Pages/About'
 import Pricing from './Pages/Pricing'
-// import Menu from './Pages/Menu'
+import BlogPost from './Component/BlogPage/BlogPost'
 import Contact from './Pages/Contact'
+import Blog from './Pages/Blog'
 import './App.css'
 import Footer from './Component/Footer'
 
@@ -25,8 +26,9 @@ function App() {
           <Route path="/Company" element={<Company />} />
           <Route path="/About" element={<About />} />
           <Route path="/Pricing" element={<Pricing />} />
-          {/* <Route path="/Menu" element={<Menu />} /> */}
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Blog/:slug" element={<BlogPost />} />
         </Routes>
         <Footer/>
       </Router>
