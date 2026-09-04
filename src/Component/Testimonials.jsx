@@ -116,14 +116,14 @@ export default function Testimonials() {
                   className="shrink-0 px-3"
                   style={{ flex: `0 0 ${100 / visibleCount}%` }}
                 >
-                  <div className="h-full text-left text-lg bg-gray-50 dark:bg-gray-900! border border-gray-300 dark:border-gray-800! rounded-2xl p-10 flex flex-col gap-4">
+                  <div className="h-full text-left md:text-lg bg-gray-50 dark:bg-gray-900! border border-gray-300 dark:border-gray-800! rounded-2xl p-10 flex flex-col gap-4">
                     <div className="flex gap-1 text-yellow-400">
                       {Array.from({ length: t.rating }).map((_, i) => (
                         <FiStar key={i} size={20} fill="currentColor" />
                       ))}
                     </div>
 
-                    <p className="mt-4 text-gray-600 dark:text-gray-300! leading-relaxed flex-1 text-[22px]">
+                    <p className="mt-4 text-gray-600 dark:text-gray-300! leading-relaxed flex-1 md:text-xl">
                       “{t.quote}”
                     </p>
 

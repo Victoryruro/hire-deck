@@ -32,7 +32,7 @@ export default function CompanyDisplay() {
             </div>
             
             {filteredPosts.length > 0 ? (
-                <div className="mt-0 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  w-full p-12  border-t border-gray-200 dark:border-gray-700!">
+                <div className="mt-0 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  w-full p-12  border-t border-gray-200 dark:border-gray-700!">
                         {filteredPosts.map(({ name, slug,location, count, icon, bg,post, }) => (
                             <Link
                             key={slug}

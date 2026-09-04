@@ -73,7 +73,7 @@ const CATEGORIES = [
 export default function ExploreByCategory() {
   return (
     <section className="w-full py-16 px-6 bg-gray-50 dark:bg-gray-950!">
-      <div className=" mx-auto text-center p-10 lg:p-20">
+      <div className=" mx-auto text-center p-6 md:p-20">
         {/* Eyebrow pill */}
         <span className="inline-block bg-indigo-100 dark:bg-indigo-900/40! text-[#4c42dc] dark:text-[#8f7ff5]! text-2xl font-semibold px-4 py-1.5 rounded-full mb-4">
           Browse Categories
@@ -94,7 +94,7 @@ export default function ExploreByCategory() {
           {CATEGORIES.map(({ name, slug, count, icon: Icon, bg, iconColor }) => (
             <Link
               key={slug}
-              to={`/jobs?category=${encodeURIComponent(slug)}`}
+              to={`/Job`}
               className="group w-full text-left bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl p-12 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
             >
               <div className={`h-12 w-12 rounded-xl flex items-center justify-center ${bg}`}>

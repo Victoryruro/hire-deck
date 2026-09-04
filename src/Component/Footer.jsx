@@ -9,9 +9,9 @@ import { FaInstagram, FaFacebook, FaTwitter, FaTiktok, FaLinkedin } from 'react-
 const Footer = () => {
   return (
     <>
-      <footer className="bg-primary-500 text-gray-500 py-8  paddingLeftRight pt-12">
+      <footer className="bg-primary-500 text-gray-500 py-8  md:paddingLeftRight pt-12">
           <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 ">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6  text-2xl font-semibold text-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6  md:text-2xl  font-semibold text-left">
                   {/* <!-- Footer Left: Logo and Description --> */}
                 <div className="col-span-1 md:col-span-2 lg:col-span-1">
                         {/* <!-- Logo --> */}
@@ -37,10 +37,10 @@ const Footer = () => {
                             123 Job Street, Career City
                         </a>
                     </div>
-                                      {/* <!-- Footer Right: Social Media & Contact --> */}
+  
                     <div>
                         
-                        <div className="mt-8 flex flex-nowrap gap-6 pt-2.5 mb-14">
+                        <div className="mt-8 flex flex-wrap md:flex-nowrap gap-6 pt-2.5 mb-14">
                             <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="rounded-xl bg-[#1f2937]   p-2 hover:text-primary-400 transition text-gray-500 hover:scale-110 transform duration-200">
                                 <FaInstagram size={35} />
                             </a>
@@ -61,9 +61,9 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="w-full grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4  justify-center  md:col-span-2 gap-6">
-                  <div className="p-8  ">
-                      <h3 className="text-lg font-bold text-primary-400 uppercase">For Job Seekers</h3>
+                <div className="w-full grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4  justify-center  md:col-span-2 md:gap-6 gap-2 text-nowrap ">
+                  <div className="md:p-8  ">
+                      <h3 className="text-lg md:text-base font-bold text-primary-400 uppercase">For Job Seekers</h3>
                       <ul className="mt-4 space-y-2">
                           <li><Link to="/#hero" className=" hover:text-gray-300 transition">Browse Jobs</Link></li>
                           <li><Link to="/About#about" className=" hover:text-gray-300 transition">Companies</Link></li>
@@ -72,8 +72,8 @@ const Footer = () => {
                           
                       </ul>
                   </div>
-                  <div className="p-8">
-                      <h3 className="text-lg font-bold text-primary-400 uppercase">For Employers</h3>
+                  <div className="md:p-8">
+                      <h3 className="text-lg md:text-base font-bold text-primary-400 uppercase">For Employers</h3>
                       <ul className="mt-4 space-y-2">
                           <li><Link to="/#hero" className=" hover:text-gray-300 transition">Post a Job</Link></li>
                           <li><Link to="/About#about" className=" hover:text-gray-300 transition">Pricing</Link></li>
@@ -82,8 +82,8 @@ const Footer = () => {
                          
                       </ul>
                   </div>
-                  <div className="p-8 ">
-                      <h3 className="text-lg font-bold text-primary-400 uppercase">Resources</h3>
+                  <div className="md:p-8">
+                      <h3 className="text-lg md:text-base font-bold text-primary-400 uppercase">Resources</h3>
                       <ul className="mt-4 space-y-2">
                           <li><Link to="/#hero" className=" hover:text-gray-300 transition">Blog</Link></li>
                           <li><Link to="/About#about" className=" hover:text-gray-300 transition">About Us</Link></li>
@@ -93,8 +93,8 @@ const Footer = () => {
                       </ul>
                   </div>
 
-                  <div className="p-8">
-                      <h3 className="text-lg font-bold text-primary-400 uppercase">Company</h3>
+                  <div className="md:p-8">
+                      <h3 className="text-lg md:text-base font-bold text-primary-400 uppercase">Company</h3>
                       <ul className="mt-4 space-y-2">
                           <li><Link to="/" className=" hover:text-gray-300 transition">About</Link></li>
                           <li><Link to="/" className=" hover:text-gray-300 transition">Contact</Link></li>
@@ -110,7 +110,7 @@ const Footer = () => {
             </div>
 
               {/* <!-- Footer Bottom: Copyright --> */}
-              <div className="mt-8 border-t border-gray-700 pt-4 text-center  text-xl font-semibold text-gray-500 flex justify-between items-center  gap-4 mb-8">
+              <div className="mt-8 border-t border-gray-700 pt-4 text-center  text-xl font-semibold text-gray-500 flex justify-between flex-wrap-reverse items-center  gap-4 mb-8">
                   <p>© 2026 VicRuro React Project.</p>
                   <div>
                     <ul className="mt-4 space-y-2 flex flex-wrap justify-center gap-6 text-xl font-semibold text-gray-500">

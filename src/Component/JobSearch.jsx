@@ -32,7 +32,7 @@ const JobSearchFilters = () => {
     if (jobTypes.length) params.set('type', jobTypes.join(','))
     if (experience.length) params.set('experience', experience.join(','))
 
-    navigate(`/jobs?${params.toString()}`)
+    navigate(`/Job?${params.toString()}`)
   }
 
   return (

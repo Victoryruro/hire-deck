@@ -10,7 +10,7 @@ function JobCard({
   tags = [],
   type,
   featured = false,
-  applyLink = '#',
+  applyLink = '/Job',
 }) {
   return (
     <div className="relative bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl p-10 hover:shadow-lg transition-shadow">

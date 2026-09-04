@@ -13,7 +13,7 @@ const jobs = [
     tags: ['React', 'TypeScript', 'Node.js'],
     type: 'Full-time',
     featured: true,
-    applyLink: '/jobs/senior-react-developer',
+    applyLink: '/Job',
   },
   {
     logo: logo,
@@ -25,7 +25,7 @@ const jobs = [
     tags: ['Figma', 'User Research', 'Design Systems'],
     type: 'Remote',
     featured: true,
-    applyLink: '/jobs/lead-ux-designer',
+    applyLink: '/Job',
   },
     {
     logo: logo,
@@ -37,7 +37,7 @@ const jobs = [
     tags: ['Python', 'Machine Learning', 'SQL'],
     type: 'Full-time',
     featured: true,
-    applyLink: '/jobs/lead-ux-designer',
+    applyLink: '/Job',
   },
     {
     logo: logo,
@@ -49,7 +49,7 @@ const jobs = [
     tags: ['AWS', 'Kubernetes', 'Terraform'],
     type: 'Full-time',
     featured: true,
-    applyLink: '/jobs/lead-ux-designer',
+    applyLink: '/Job',
   },
     {
     logo: logo,
@@ -61,7 +61,7 @@ const jobs = [
     tags: ['Figma', 'User Research', 'Design Systems'],
     type: 'Remote',
     featured: true,
-    applyLink: '/jobs/lead-ux-designer',
+    applyLink: '/Job',
   },
     {
     logo: logo,
@@ -73,7 +73,7 @@ const jobs = [
     tags: ['Figma', 'User Research', 'Design Systems'],
     type: 'Remote',
     featured: true,
-    applyLink: '/jobs/lead-ux-designer',
+    applyLink: '/Job',
   },
 
 ]
@@ -84,18 +84,18 @@ export default function JobsDisplay() {
         <div className='bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! text-center pt-12'>
             <div className='text-center flex flex-col items-center'>
                 <p className='bg-[#e0e7ff] dark:bg-[#191a4a]! text-primary-50 text-center w-fit p-2.5 px-6.5 text-lg rounded-xl'>Featured Job</p> 
-                <h1 className='text-7xl font-semibold pt-4 pb-5 dark:text-primary-400'>Lastest Oppurtunity</h1>
-                <p className='text-gray-500 text-3xl pt-5'>Hand-picked positions from top companies looking for exceptional talent.</p>               
+                <h1 className='text-5xl md:text-7xl font-semibold pt-4 pb-5 dark:text-primary-400!'>Lastest Oppurtunity</h1>
+                <p className='text-gray-500 text-xl md:text-3xl pt-5'>Hand-picked positions from top companies looking for exceptional talent.</p>               
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-5 md:p-16">
             {jobs.map((job) => (
                 <JobCard key={job.title} {...job} />
             ))}
             </div>
             <div className='flex items-center flex-col pb-18 '>
                 <button
-                //   onClick={handleSearch}
+                  onClick={() => window.location.href = '/Job'}
                 className=" flex items-center px-12 py-4 bg-[#4c42dc] text-white font-semibold text-xl rounded-2xl shadow-gray-400 hover:opacity-90 transition-all "
                 >
                 View all Jobs <FiArrowRight size={16}/>

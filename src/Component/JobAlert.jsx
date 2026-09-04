@@ -36,20 +36,20 @@ export function JobAlertsSection() {
           className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto mb-5"
         >
           <div className="w-full sm:flex-1 flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-3">
-            <FiMail className="text-gray-500 shrink-0" size={22} />
+            <FiMail className="text-gray-500 shrink-0" size={30} />
             <input
               type="email"
               required
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-transparent outline-none text-base text-gray-200 placeholder:text-gray-500"
+              className="w-full bg-transparent outline-none text-xl text-gray-200 placeholder:text-gray-500"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full sm:w-auto px-6 py-3 bg-linear-to-r from-[#4c42dc] to-[#7123bb] text-white font-semibold rounded-full hover:opacity-90 transition-all whitespace-nowrap"
+            className="w-full sm:w-auto px-6 py-3 bg-linear-to-r from-[#4c42dc] to-[#7123bb] text-white font-semibold rounded-full hover:opacity-90 transition-all whitespace-nowrap text-xl"
           >
             Get Job Alerts
           </button>
@@ -79,7 +79,7 @@ export function FinalCtaSection() {
 
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
-            to="/jobs"
+            to="/Job"
             className="flex items-center gap-2 px-6 py-3 bg-white text-[#4c42dc] font-semibold rounded-full hover:opacity-90 transition-all"
           >
             <FiSearch size={22} />
@@ -87,7 +87,7 @@ export function FinalCtaSection() {
           </Link>
 
           <Link
-            to="/PostAJob"
+            to="/Company"
             className="flex items-center gap-2 px-6 py-3 border border-white/40 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
           >
             <FiPlus size={22} />

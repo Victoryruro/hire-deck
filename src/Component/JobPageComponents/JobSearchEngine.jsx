@@ -36,28 +36,28 @@ const JobSearchEngine = () => {
   }
 
   return (
-    <div className="w-full h-fit border-2 border-gray-400  mx-auto bg-white dark:bg-gray-900! rounded-2xl  p-3 pt-10 pb-10 sticky top-30 self-start ">
+    <div className="w-full h-fit border-2 border-gray-400  mx-auto bg-white dark:bg-gray-900! rounded-2xl  p-3 pt-10 pb-10 md:sticky top-30 md:self-start ">
       {/* Search row */}
       <h1 className='text-3xl font-semibold text-left pb-8 dark:text-gray-300!'>Filters</h1>
       <div className="flex flex-col gap-3 items-start text-left dark:text-gray-300!"> 
-        <div className=" items-center gap-y-9 ">
+        <div className=" items-center gap-y-9 w-full ">
           <label htmlFor="text" className='text-2xl '>Keyword</label><br/>
           <input
             type="text"
             placeholder="Job title"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
-            className=" p-3  outline-none text-lg text-gray-700 bg-gray-50 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-8 py-3  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 "
+            className=" p-3 w-full md:w-full outline-none text-lg text-gray-700 bg-gray-50 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-8 py-3  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 "
           />
         </div>
-        <div className=" items-center gap-2 mt-7">
+        <div className=" items-center w-full gap-2 mt-7">
           <label htmlFor="text" className='text-2xl'>Location</label><br />
           <input
             type="text"
             placeholder="City or Remote"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            className=" p-3  outline-none text-lg text-gray-700 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-8 py-3  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 "
+            className=" p-3 w-full md:w-full outline-none text-lg text-gray-700 bg-gray-50 dark:text-white! dark:bg-gray-800! border border-gray-200 dark:border-gray-700! rounded-lg px-8 py-3  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 "
           />
         </div>
         <div className=" items-center gap-2 ">

@@ -51,7 +51,7 @@ export default function HowItWorks() {
 
   return (
     <section className="w-full py-16 px-6 bg-gray-50 dark:bg-gray-950!">
-      <div className="p-8 mx-auto text-center">
+      <div className="p-2 md:p-8 mx-auto text-center">
         {/* Eyebrow pill */}
         <span className="inline-block bg-indigo-100 text-xl dark:bg-indigo-900/40! text-[#4c42dc] dark:text-[#8f7ff5]!  font-semibold px-4 py-1.5 rounded-full mb-4">
           How It Works
@@ -72,7 +72,7 @@ export default function HowItWorks() {
         <div className="inline-flex items-center bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-full p-1 mt-8">
           <button
             onClick={() => setActiveTab('seekers')}
-            className={`px-5 py-2 rounded-full text-xl font-semibold transition-all ${
+            className={`px-5 py-2 rounded-full md:text-xl font-semibold transition-all ${
               activeTab === 'seekers'
                 ? 'bg-linear-to-r from-[#4c42dc] to-[#4c42dc] text-white'
                 : 'text-gray-600 dark:text-gray-300!'
@@ -82,7 +82,7 @@ export default function HowItWorks() {
           </button>
           <button
             onClick={() => setActiveTab('employers')}
-            className={`px-5 py-2 rounded-full text-xl font-semibold transition-all ${
+            className={`px-5 py-2 rounded-full md:text-xl font-semibold transition-all ${
               activeTab === 'employers'
                 ? 'bg-linear-to-r from-[#4c42dc] to-[#4c42dc] text-white'
                 : 'text-gray-600 dark:text-gray-300!'

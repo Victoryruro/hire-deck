@@ -94,7 +94,7 @@ export const CATEGORIES = [
 export default function CompanyHire() {
   return (
     <section className="w-full py-16 px-6 bg-[#ffffff] dark:bg-[#030712]/90!">
-      <div className=" mx-auto text-center p-20">
+      <div className=" mx-auto text-center p-1 md:p-20">
         {/* Eyebrow pill */}
         <span className="inline-block bg-indigo-100 dark:bg-indigo-900/40! text-[#4c42dc] dark:text-[#8f7ff5]! text-2xl font-semibold px-4 py-1.5 rounded-full mb-4">
           Top Employers
@@ -115,8 +115,8 @@ export default function CompanyHire() {
           {CATEGORIES.slice(0, 6).map(({ name, slug,location, count, icon, bg, }) => (
             <Link
               key={slug}
-              to={`/jobs?category=${encodeURIComponent(slug)}`}
-              className="group w-full text-center flex flex-col items-center justify-center bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl p-12 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+              to={`/Company?category=${encodeURIComponent(slug)}`}
+              className="group w-full text-center flex flex-col items-center justify-center bg-white dark:bg-gray-900! border border-gray-200 dark:border-gray-700! rounded-2xl p-4 md:p-12 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
             >
               <div className={`p-2 w-34 rounded-xl  dark:bg-[#6ee494]! `}>
                 <img src={icon} alt="icon" width={150} />
